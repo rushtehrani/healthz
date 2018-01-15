@@ -1,7 +1,5 @@
 ## Production Release
 
-Push to Google Container Registry:
-
-```sh
-gcloud container builds submit --tag us.gcr.io/invenio-ml/healthz:<version> .
+```bash
+TAG=0.9.0 REGISTRY=577015676359.dkr.ecr.us-west-2.amazonaws.com make release
 ```

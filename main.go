@@ -18,8 +18,8 @@ func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Access-Control-Allow-Headers", "Content-Type,Authorization")
 		w.Header().Set("Access-Control-Allow-Origin", *origin)
-		w.Header().Set("Access-Control-Allow-Methods", "GET")
-		w.WriteHeader(200)
+		w.Header().Set("Access-Control-Allow-Methods", "HEAD, GET")
+		w.WriteHeader(http.StatusNoContent)
 
 		log.Println("/")
 	})
